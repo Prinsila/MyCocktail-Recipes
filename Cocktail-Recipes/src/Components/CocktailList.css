@@ -1,0 +1,60 @@
+/* Styles for the cocktail list container */
+.cocktail-list-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Styles for the list itself */
+.cocktail-list {
+    list-style-type: none; 
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+    grid-gap: 20px; 
+    width: 100%; 
+    max-width: 1200px; 
+}
+
+/* Styles for each list item */
+.cocktail-list-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    background: #f8f8f8; 
+    border: 1px solid #ccc; 
+    border-radius: 10px; 
+    padding: 10px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+/* Styles for images within list items */
+.cocktail-image {
+    width: 100px; 
+    height: 100px; 
+    object-fit: cover; 
+    border-radius: 50%; 
+    margin-bottom: 10px; 
+}
+
+/* Text styling for cocktail names */
+.cocktail-name {
+    font-size: 16px; 
+    color: #333; 
+    text-align: center; 
+}
+
+
+@media (max-width: 768px) {
+    .cocktail-list {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); 
+    }
+    .cocktail-image {
+        width: 80px; 
+        height: 80px;
+    }
+    .cocktail-name {
+        font-size: 14px; 
+    }
+}

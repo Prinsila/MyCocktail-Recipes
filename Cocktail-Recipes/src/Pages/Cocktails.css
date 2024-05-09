@@ -1,0 +1,93 @@
+/* General page styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Header styles */
+h1 {
+  text-align: center;
+  color: #333;
+  margin-top: 20px;
+}
+
+/* Cocktail list styles */
+.cocktail-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+
+/* Search form styling */
+.search-form {
+  display: flex;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+.search-form input[type="text"],
+.search-form select {
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.search-form button {
+  padding: 10px 20px;
+  background-color: #39e4ea;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.search-form button:hover {
+  background-color: #06451a;
+}
+
+/* Cocktail card styles */
+.cocktail-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.cocktail-card:hover {
+  transform: scale(1.05);
+}
+
+.cocktail-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.cocktail-card div {
+  padding: 15px;
+  text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .cocktail-list {
+    grid-template-columns: 1fr;  /* Stacks the cards on smaller screens */
+  }
+
+  .search-form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .search-form input[type="text"],
+  .search-form select,
+  .search-form button {
+    margin-bottom: 10px;
+    width: 80%; 
+    text-decoration: none; /* Makes form elements full width on small screens */
+  }
+}

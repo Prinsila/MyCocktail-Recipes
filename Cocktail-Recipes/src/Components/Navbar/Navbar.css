@@ -1,0 +1,56 @@
+nav {
+  background-color: #2c3e50; /* A deep, dark blue for elegance and readability */
+  color: white;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+}
+
+.nav-center {
+  display: flex;
+  justify-content: space-between; /* Aligns logo and links on opposite sides */
+  align-items: center; /* Centers items vertically within the nav */
+  max-width: 1200px;
+  margin: 0 auto; /* Centering the navbar content horizontally */
+  padding: 0 20px; /* Padding on the sides for a bit of space */
+}
+
+.logo {
+  font-size: 1.8em; /* A larger font size for the logo for emphasis */
+  font-weight: bold;
+  cursor: pointer; /* Indicates the logo is clickable */
+}
+
+.nav-links {
+  display: flex;
+  gap: 15px; /* Space between each link */
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 4px; /* Rounded corners for aesthetic */
+  transition: background-color 0.3s ease-in-out; /* Smooth transition for hover effect */
+}
+
+.nav-links a:hover, .nav-links a:focus {
+  background-color: #4a6572; /* A lighter shade of the navbar color for hover */
+  outline: none; /* Removes the focus outline to maintain style */
+}
+
+@media (max-width: 768px) {
+  .nav-center {
+    flex-direction: column; /* Stack logo and links vertically on smaller screens */
+  }
+
+  .nav-links {
+    flex-direction: column; /* Stack links vertically under the logo */
+    width: 100%; /* Full width for better mobile usability */
+    gap: 10px; /* Reduced gap for compact appearance */
+  }
+
+  .nav-links a {
+    width: 100%; /* Full width links make it easier to tap on mobile */
+    text-align: center; /* Center-align text for better aesthetics */
+  }
+}

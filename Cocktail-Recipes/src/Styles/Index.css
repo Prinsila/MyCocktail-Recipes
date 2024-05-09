@@ -1,0 +1,86 @@
+/* src/styles/index.css */
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+
+
+
+.Cocktail-card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border-radius: 0.5rem;
+	overflow: hidden;
+	background-color: #d4e115;
+}
+
+
+
+ 
+  body {
+   margin: 0 ;
+   padding: 0;
+   font-family: Arial, sans-serif;
+   background-color: #efe4d5;
+   
+   
+  } 
+  
+   nav {
+   background-color: #0e5643;
+   padding: 10px;
+   text-align: center;
+   }
+  
+   nav a {
+   color: white;
+   margin: 0 10px;
+   }
+   
+  footer {
+   background-color: #0f6546;
+   color: white;
+   text-align: center;
+   padding: 10px;
+   position: fixed;
+   bottom: 0;
+   width:100%;
+  }
+ 
+/* Responsive design for navigation */
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .navbar a {
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+  }
+
+  footer {
+    position: relative;
+
+     /* Change footer positioning on small screens */
+    
+  }
+}
+/* Adjust content spacing on smaller devices */
+
+@media (max-width: 480px) {
+   .content {
+     padding: 10px;
+   }
+ }
+ 
+
+

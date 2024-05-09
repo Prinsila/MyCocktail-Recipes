@@ -1,0 +1,19 @@
+/* Footer styling */
+footer {
+    background-color: #11d96b;  
+    color: #fff;             
+    text-align: center;      
+    padding: 20px 10px;      
+    position: absolute;      
+    left: 0;                 
+    bottom: 0;               
+    width: 100%;             
+    box-shadow: 0 -2px 5px rgba(237, 39, 39, 0.2); 
+  }
+  
+  @media (max-width: 768px) {
+    footer {
+      padding: 10px 5px;    
+      font-size: 14px;      }
+  }
+  

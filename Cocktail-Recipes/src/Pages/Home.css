@@ -1,0 +1,49 @@
+.Home {
+  text-align: center; /* Centers text and images */
+  color: #333; /* Dark gray text color for better readability */
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Modern, readable font */
+  padding: 20px;
+  background-color: #fff; /* White background to keep it clean and versatile */
+}
+
+h1 {
+  color: #006d77; /* A deep teal for a touch of elegance */
+  margin-bottom: 20px; /* Space below the header */
+}
+
+.banner {
+  width: 100%; /* Full width banner */
+  max-height: 400px; /* Restrict banner height */
+  object-fit: cover; /* Ensures the image covers the area without being stretched */
+  border-bottom: 5px solid #83c5be; /* Teal border for a pop of color */
+}
+
+.p1 {
+  color: #343a40; /* Dark charcoal gray for the paragraph */
+  font-size: 1.1em; /* Slightly larger font size for readability */
+  line-height: 1.6; /* Improved line spacing for readability */
+  margin: 20px auto; /* Top and bottom margin with automatic horizontal margins */
+  max-width: 800px; /* Max width to maintain line length */
+  text-align: left; /* Align text to the left for paragraph readability */
+}
+
+.wave {
+  width: 100%; /* Full width for the decorative image */
+  margin-top: 40px; /* Space above the image */
+}
+
+@media (min-width: 768px) {
+  .Home {
+    padding: 40px; /* Increased padding on larger screens */
+  }
+
+  .p1 {
+    font-size: 1.2em; /* Slightly larger font size on bigger screens */
+  }
+}
+
+@media (min-width: 1024px) {
+  .Home {
+    padding: 60px; /* Further increased padding for desktop screens */
+  }
+}

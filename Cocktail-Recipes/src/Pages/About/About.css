@@ -1,0 +1,42 @@
+.About {
+  background-color: #ffffff; 
+  color: #2c3e50; 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+  padding: 20px; 
+  max-width: 800px; 
+  margin: 0 auto; 
+  line-height: 1.6; 
+}
+
+h1 {
+  color: #27ae60; 
+  text-align: center;
+  margin-top: 20px; 
+  margin-bottom: 20px; 
+}
+
+img {
+  width: 100%; 
+  height: auto; 
+  margin-bottom: 20px; 
+}
+
+.p2 {
+  text-align: justify; 
+  font-size: 1.1em; 
+  margin-bottom: 20px; 
+}
+
+@media (min-width: 768px) {
+  .About {
+    padding: 40px; 
+  }
+
+  h1 {
+    font-size: 2em; 
+  }
+
+  .p2 {
+    font-size: 1.2em; 
+  }
+}

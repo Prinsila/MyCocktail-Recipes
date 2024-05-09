@@ -1,0 +1,125 @@
+/* Default light theme styles for normal visibility */
+
+body[data-theme="light"] {
+    background-color: #f0f0f0;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+a, button {
+    color: #e6e8ea;
+    background-color: transparent;
+}
+
+button {
+    border: 2px solid transparent;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+input, select, textarea {
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* High contrast and large text styles for dark theme */
+
+body[data-theme="dark"] {
+    background-color: #000;
+    color:  #ff0;
+    font-family: Arial, sans-serif;
+    font-size: 18px; /* Larger text for better readability*/ 
+}
+
+body[data-theme="dark"] a,
+body[data-theme="dark"] button {
+    color: #ff0; /* Bright yellow for high visibility */
+   background-color: #333; /* Slightly lighter background for buttons */
+    border: 2px solid #ff0; /* High contrast border for buttons */
+}
+
+body[data-theme="dark"] input,
+body[data-theme="dark"] select,
+body[data-theme="dark"] textarea {
+    color: #000;
+    background-color: #fff;
+    border: 2px solid #ff0; /* Ensuring high visibility borders */
+}
+
+body[data-theme="dark"] button:hover,
+body[data-theme="dark"] a:hover {
+    background-color: #555; /* Darker background on hover for buttons and links */
+   color: #ff0;
+}
+
+/* Focus styles to enhance accessibility */
+input:focus, select:focus, textarea:focus,
+button:focus, a:focus {
+    outline: 3px solid #ff0; /* Bright outline for focused elements */
+    outline-offset: 2px;
+}
+
+/* Larger clickable areas for accessibility */
+ button {
+    min-width: 100px;
+    padding: 15px 20px;
+    font-size: larger; /* Larger font size for easier reading */
+   line-height: 1.5;
+}
+
+/*
+.toggle-button {
+    cursor: pointer;
+    background: none;
+    border: 2px solid transparent;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 18px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    display: inline-block; /* Ensure button is properly aligned */
+ /*   outline: none; /* Remove default focus outline */
+/*}
+
+.toggle-button:focus {
+    box-shadow: 0 0 0 3px rgba(21, 156, 228, 0.4); /* Accessibility focus ring */
+/*}
+
+.toggle-button:hover {
+    background-color: #f4f4f4; /* Light grey for light theme */
+/*}
+
+.body[data-theme='light'] .toggle-button {
+    color: #333; /* Dark text on light theme */
+   /* background-color: #eee; /* Light background on light theme */
+/*}*/
+/*
+.body[data-theme='dark'] .toggle-button {
+    color: #fff; /* White text on dark theme */
+  /*  background-color: #444; /* Darker background on dark theme */
+/*}
+
+.body[data-theme='dark'] .toggle-button:hover {
+    background-color: #555; /* Slightly lighter gray on hover in dark theme */
+/*}
+
+
+/* Adjustments for visually impaired users */
+@media screen and (min-width: 1200px) {
+    .body[data-theme="dark"] {
+        font-size: 20px; /* Even larger text on large screens */
+    }
+}
+
+@media (prefers-contrast: high) {
+    .toggle-button {
+        background-color: black;
+        color: white;
+        border: 2px solid yellow;
+    }
+
+    .toggle-button:hover, .toggle-button:focus {
+        background-color: yellow;
+        color: black;
+    }
+}

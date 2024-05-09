@@ -1,0 +1,79 @@
+/* Container styling for a clean and modern look */
+.container {
+    background: #ffffff; /* White background */
+    border-radius: 12px; /* Smoother rounded corners for a soft look */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Deeper shadow for more depth */
+    padding: 30px; /* Ample padding for internal spacing */
+    width: 90%;
+    max-width: 600px; /* Optimal max-width for readability */
+    margin: 50px auto; /* Increased margin for better focus on the form */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center alignment for all children */
+  }
+  
+  /* Elegant title styling */
+  h1 {
+    font-size: 28px; /* Larger font size for impact */
+    color: #2c3e50; /* Navy blue for a professional appearance */
+    margin-bottom: 25px; /* Slightly more space below the title */
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Modern and clean font */
+  }
+  
+  /* Enhanced image styling for engagement */
+  .contact-image {
+    width: 100%;
+    border-radius: 8px; /* Consistently rounded corners */
+    margin-bottom: 30px; /* More space between the image and form */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* Light shadow for the image */
+  }
+  
+  /* Field container styling */
+  .field {
+    width: 100%; /* Ensure fields use full container width */
+    margin-bottom: 20px; /* Uniform margin for a clean layout */
+  }
+  
+  /* Styling for all input fields and textareas */
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 12px 15px; /* Balanced padding for comfort */
+    border: 2px solid #e2e2e2; /* Lighter, more subtle border */
+    border-radius: 6px; /* Moderately rounded corners */
+    font-size: 16px; /* Readable but not too large font size */
+    font-family: 'Arial', sans-serif; /* Consistent font across the form */
+    background: #fafafa; /* Slightly off-white background for less strain on eyes */
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.06); /* Inner shadow for a sense of depth */
+    transition: border-color 0.3s; /* Smooth transition for interactivity */
+  }
+  
+  textarea {
+    height: 140px; /* Provides more space for writing messages */
+    resize: vertical; /* Allows vertical resizing only */
+  }
+  
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  textarea:focus {
+    border-color: #4CAF50; /* Highlight focus with the theme color */
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2); /* Subtle outer glow for focus */
+  }
+  
+  /* Button styling for better interaction */
+  button {
+    background: linear-gradient(to right, #4CAF50, #45a049); /* Gradient background */
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s; /* Smooth background color transition on hover */
+  }
+  
+  button:hover {
+    background: linear-gradient(to right, #45a049, #3e8c43); /* Darker gradient on hover */
+  }
+  
