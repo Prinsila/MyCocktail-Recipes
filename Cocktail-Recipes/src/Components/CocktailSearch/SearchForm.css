@@ -1,78 +1,101 @@
-/* Overall form styling */
-searchform {
-  max-width: 600px;
-  margin: 20px auto;
+/* General Styles for the Search Form */
+.searchform {
+  max-width: 800px;
+  margin: 40px auto;
   padding: 20px;
-  background-color: #f7f7f7;
+  background-color: #ffffff;
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  font-family: 'Arial', sans-serif;
-}
-
-.shearch2 {
-  color: #2c3e50;
-  text-align: center;
-}
-
-.searchf {
-  margin-top: 20px;
-  display: grid;
-  grid-template-columns: 1fr auto;
-  grid-gap: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
-.searchl {
-  grid-column: 1 / 3;
-  margin-bottom: 5px;
+.searchh2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
 }
 
-.searchi {
-  padding: 8px;
+/* Form styling */
+form {
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Label styling */
+.searchl,
+label {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* Select and Input styling */
+.searchs,
+input[type="text"] {
+  width: 70%;
+  padding: 12px 20px;
+  margin-bottom: 15px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  grid-column: 1 / 2;
+  font-size: 16px;
 }
 
-.searchs {
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  grid-column: 1 / 2;
-}
-
-.searchb{
-  padding: 10px 20px;
+/* Button styling */
+button {
+  padding: 10px 15px;
   background-color: #4CAF50;
-  color: white;
+  color: rgb(175, 162, 162);
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s;
+  width: 50%;
 }
 
-.searchb:hover {
-  background-color: #45a049;
+button:hover {
+  background-color: #367c39;
 }
 
-/* Loading and list styling 
-p {
+/* Image styling */
+.barmanImage {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  margin-top: 20px;
+  border-radius: 8px;
+}
+
+/* Paragraph styling for intro text */
+.searchp {
   text-align: center;
-  color: #555;
+  line-height: 1.6;
+  color: #666;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
+/* Cocktail list styling */
 .cocktail-list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
   margin-top: 20px;
 }
-*/
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .searchf {
-      grid-template-columns: 1fr;
-      grid-gap: 15px;
+  .searchs, 
+  input[type="text"],
+  button {
+      width: 90%;
   }
 
- .searchb {
-      grid-column: 1;
+  .barmanImage {
+      max-width: 300px;
   }
 }

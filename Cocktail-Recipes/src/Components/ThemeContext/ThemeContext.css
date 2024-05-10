@@ -7,8 +7,9 @@ body[data-theme="light"] {
 }
 
 a, button {
-    color: #e6e8ea;
+    color: #396131;
     background-color: transparent;
+    text-decoration: none;
 }
 
 button {
@@ -27,36 +28,36 @@ input, select, textarea {
 
 body[data-theme="dark"] {
     background-color: #000;
-    color:  #ff0;
+    color:  rgb(112, 112, 90);
     font-family: Arial, sans-serif;
-    font-size: 18px; /* Larger text for better readability*/ 
+    font-size: 18px; 
 }
 
 body[data-theme="dark"] a,
 body[data-theme="dark"] button {
-    color: #ff0; /* Bright yellow for high visibility */
-   background-color: #333; /* Slightly lighter background for buttons */
-    border: 2px solid #ff0; /* High contrast border for buttons */
+    color: #ff0; 
+   background-color: #333; 
+    border: 2px solid #ff0; 
 }
 
 body[data-theme="dark"] input,
 body[data-theme="dark"] select,
 body[data-theme="dark"] textarea {
     color: #000;
-    background-color: #fff;
-    border: 2px solid #ff0; /* Ensuring high visibility borders */
+    background-color: #666262;
+    border: 2px solid #ff0; 
 }
 
 body[data-theme="dark"] button:hover,
 body[data-theme="dark"] a:hover {
-    background-color: #555; /* Darker background on hover for buttons and links */
+    background-color: #555; 
    color: #ff0;
 }
 
 /* Focus styles to enhance accessibility */
 input:focus, select:focus, textarea:focus,
 button:focus, a:focus {
-    outline: 3px solid #ff0; /* Bright outline for focused elements */
+    outline: 3px solid #ff0; 
     outline-offset: 2px;
 }
 
@@ -64,11 +65,11 @@ button:focus, a:focus {
  button {
     min-width: 100px;
     padding: 15px 20px;
-    font-size: larger; /* Larger font size for easier reading */
+    font-size: larger; 
    line-height: 1.5;
 }
 
-/*
+
 .toggle-button {
     cursor: pointer;
     background: none;
@@ -77,32 +78,17 @@ button:focus, a:focus {
     border-radius: 8px;
     font-size: 18px;
     transition: background-color 0.2s ease, color 0.2s ease;
-    display: inline-block; /* Ensure button is properly aligned */
- /*   outline: none; /* Remove default focus outline */
-/*}
+    display: inline-block; 
+    outline: none; 
+}
 
 .toggle-button:focus {
-    box-shadow: 0 0 0 3px rgba(21, 156, 228, 0.4); /* Accessibility focus ring */
-/*}
+    box-shadow: 0 0 0 3px rgba(21, 156, 228, 0.4); 
+}
 
 .toggle-button:hover {
-    background-color: #f4f4f4; /* Light grey for light theme */
-/*}
-
-.body[data-theme='light'] .toggle-button {
-    color: #333; /* Dark text on light theme */
-   /* background-color: #eee; /* Light background on light theme */
-/*}*/
-/*
-.body[data-theme='dark'] .toggle-button {
-    color: #fff; /* White text on dark theme */
-  /*  background-color: #444; /* Darker background on dark theme */
-/*}
-
-.body[data-theme='dark'] .toggle-button:hover {
-    background-color: #555; /* Slightly lighter gray on hover in dark theme */
-/*}
-
+    background-color: #f4f4f4; 
+}
 
 /* Adjustments for visually impaired users */
 @media screen and (min-width: 1200px) {

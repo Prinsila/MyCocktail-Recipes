@@ -19,6 +19,12 @@ const Contact: React.FC = () => {
   return (
     <div className="container">
       <h1>Contact Us</h1>
+      <p>Welcome to our vibrant mixer's community at Cocktail Connoisseur. Whether you have a question, 
+        feedback, or just want to share your unique cocktail creation, we're here to listen and engage. 
+        Our community thrives on your contributions and insights, and we're eager to hear from you.
+        Use the form below to drop us a message—be it a query about a specific recipe, suggestions for our site,
+        or your own personal mixology experiences. We promise to stir up a conversation and get back to you as soon as we can. 
+        Let's blend some ideas and keep the spirits high! </p>
       <img className="contactImage" src={contactImage} alt="Contact Us" />
       <form onSubmit={handleSubmit}>
         <div className="field">
