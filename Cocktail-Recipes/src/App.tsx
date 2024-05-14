@@ -3,7 +3,7 @@ import Footer from './Components/Footer/Footer';
 import Home from './Pages/Home';
 import About from './Pages/About/About';
 import Cocktails from './Pages/Cocktails';
-import CocktailDetail from './Pages/Cocktaildetail'; // Ensure this import matches the filename and case
+import CocktailDetail from './Pages/Cocktaildetail'; 
 import SearchForm from './Components/CocktailSearch/SearchForm';
 import Navbar from './Components/Navbar/Navbar';
 import './Styles/Index.css';
@@ -12,7 +12,7 @@ import ContactPage from './Pages/Contact/Contact';
 function App() {
   return (
     <Router>
-      <Navbar /> {/* Navbar is correctly placed at the top */}
+      <Navbar /> 
       <div className="content">
         <Routes>
           <Route path="/" element={<Home />} />
@@ -20,10 +20,10 @@ function App() {
           <Route path="/cocktails" element={<Cocktails />} />
           <Route path="/cocktails/:id" element={<CocktailDetail />} />
           <Route path="/SearchForm" element={<SearchForm />} />
-          <Route path="/contactPage" element={<ContactPage />} /> {/* Fixed typo and closing tag */}
+          <Route path="/contactPage" element={<ContactPage />} /> 
         </Routes>
       </div>
-      <Footer /> {/* Footer is correctly placed at the bottom */}
+      <Footer /> 
     </Router>
   );
 }

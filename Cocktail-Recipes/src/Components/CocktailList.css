@@ -1,4 +1,4 @@
-/* Styles for the cocktail list container */
+
 .cocktail-list-container {
     padding: 20px;
     display: flex;
@@ -6,7 +6,7 @@
     align-items: center;
 }
 
-/* Styles for the list itself */
+
 .cocktail-list {
     list-style-type: none; 
     padding: 0;
@@ -17,7 +17,7 @@
     max-width: 1200px; 
 }
 
-/* Styles for each list item */
+
 .cocktail-list-item {
     display: flex;
     flex-direction: column;
@@ -29,7 +29,7 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
 }
 
-/* Styles for images within list items */
+
 .cocktail-image {
     width: 100px; 
     height: 100px; 
@@ -38,7 +38,7 @@
     margin-bottom: 10px; 
 }
 
-/* Text styling for cocktail names */
+
 .cocktail-name {
     font-size: 16px; 
     color: #333; 

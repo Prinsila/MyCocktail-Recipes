@@ -1,8 +1,7 @@
-// src/pages/Home.tsx
 
 
-import waveImage from '../assets/cocktail-photos/wave.svg'; // Renamed for clarity
-import bannerImage from '../assets/cocktail-photos/honey_cocktail2.png'; // Renamed for clarity
+import waveImage from '../assets/cocktail-photos/wave.svg'; 
+import bannerImage from '../assets/cocktail-photos/honey_cocktail2.png'; 
 import './Home.css';
 
 function Home() {

@@ -32,26 +32,26 @@ h1 {
 .search-form select {
   padding: 10px;
   margin-right: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #5b5858;
   border-radius: 5px;
 }
 
 .search-form button {
   padding: 10px 20px;
   background-color: #39e4ea;
-  color: white;
+  color: rgb(31, 29, 29);
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
 
 .search-form button:hover {
-  background-color: #06451a;
+  background-color: #171b18;
 }
 
 /* Cocktail card styles */
 .cocktail-card {
-  border: 1px solid #ddd;
+  border: 1px solid #e2d2d2;
   border-radius: 8px;
   overflow: hidden;
   transition: transform 0.3s ease-in-out;

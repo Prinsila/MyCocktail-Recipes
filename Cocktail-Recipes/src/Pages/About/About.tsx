@@ -1,4 +1,3 @@
-// src/pages/About.tsx
 
 import cocktailImage from '../../assets/cocktail-photos/banner1.png';
 import './About.css';

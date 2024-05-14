@@ -1,6 +1,18 @@
-/* Default light theme styles for normal visibility */
 
+/*:root{
+    --primary:#0e5643;
+    --secondary: #18181B;
+    --header: white;
+    --bodycolor:#efe4d5;
+   }
+  .dark {
+    --primary:#da1f1f;
+    --secondary: #1818C6;
+    --header: red;
+    --bodycolor:#0a0a0a;
+   } */
 body[data-theme="light"] {
+    --nam: 
     background-color: #f0f0f0;
     color: #333;
     font-family: Arial, sans-serif;
@@ -24,7 +36,7 @@ input, select, textarea {
     font-size: 16px;
 }
 
-/* High contrast and large text styles for dark theme */
+
 
 body[data-theme="dark"] {
     background-color: #000;
@@ -54,14 +66,14 @@ body[data-theme="dark"] a:hover {
    color: #ff0;
 }
 
-/* Focus styles to enhance accessibility */
+
 input:focus, select:focus, textarea:focus,
 button:focus, a:focus {
     outline: 3px solid #ff0; 
     outline-offset: 2px;
 }
 
-/* Larger clickable areas for accessibility */
+
  button {
     min-width: 100px;
     padding: 15px 20px;
@@ -90,10 +102,9 @@ button:focus, a:focus {
     background-color: #f4f4f4; 
 }
 
-/* Adjustments for visually impaired users */
 @media screen and (min-width: 1200px) {
     .body[data-theme="dark"] {
-        font-size: 20px; /* Even larger text on large screens */
+        font-size: 20px; 
     }
 }
 

@@ -8,7 +8,7 @@ interface CocktailDetail {
   strDrink: string;
   strInstructions: string;
   strDrinkThumb: string;           
-  [key: string]: string | null; // For dynamic keys like ingredients and measures
+  [key: string]: string | null; 
 }
 
 function CocktailDetail() {
@@ -37,10 +37,10 @@ function CocktailDetail() {
     };
 
     if (id) fetchCocktailDetail();
-  }, [id]); // Dependency on `id` to re-run this effect if id changes
+  }, [id]); 
 
   return (
-    <div>
+    <div style={{minWidth:'90vh'}}>
       {loading ? (
         <p>Loading cocktail details...</p>
       ) : error ? (
@@ -48,7 +48,7 @@ function CocktailDetail() {
       ) : cocktail ? (
         <div className='cocktailDetail'>
           <Link to="/" className="btn">
-          back to home
+          back to Home
         </Link>
           <h1 className='DetailH'>{cocktail.strDrink}</h1>
           <img className='CocktailImg' src={cocktail.strDrinkThumb} alt={cocktail.strDrink} style={{ width: 200 }} />

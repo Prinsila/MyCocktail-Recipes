@@ -1,20 +1,26 @@
 import React, { useState } from 'react';
-import './ContactPage.css'; // Ensure the stylesheet is correctly linked
+import './ContactPage.css'; 
 import contactImage from '../../assets/cocktail-photos/contact.jpg';
-import FormField from './FormField'; // Ensure this component is properly implemented
+import FormField from './FormField'; 
 
 const Contact: React.FC = () => {
-  // State hooks for each form field
+  
   const [name, setName] = useState<string>('');
   const [email, setEmail] = useState<string>('');
   const [message, setMessage] = useState<string>('');
 
-  // Handle form submission
+  
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     console.log('Form Submitted:', { name, email, message });
-    // Here, you could also add API calls to send the data to a server
+    setSend(true)
+    setTimeout(()=>{
+      setSend(false)
+    },6000)
+    
   };
+
+const [send,setSend] = useState<boolean>(false)
 
   return (
     <div className="container">
@@ -56,6 +62,7 @@ const Contact: React.FC = () => {
         </div>
         <button type="submit">Send</button>
       </form>
+      {send ? <h1> thanks for your message</h1> : ""}
     </div>
   );
 };

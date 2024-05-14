@@ -1,5 +1,5 @@
 import React from 'react';
-import { useTheme } from './ThemeContext'; // Ensure this path is correct
+import { useTheme } from './ThemeContext'; 
 import './ThemeContext.css';
 
 const ToggleIcon: React.FC = () => {

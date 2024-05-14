@@ -1,4 +1,4 @@
-import  { useState, FormEvent } from 'react';
+import  { useState, useRef, useEffect, FormEvent } from 'react';
 import { Cocktail } from '../../Types/CocktailTypes';
 import { fetchCocktailsByType, searchCocktailsByName } from '../../Services/DrinkServices';
 import CocktailCard from '../CocktailCard/CocktailCard';
@@ -10,6 +10,13 @@ function SearchForm() {
     const [searchName, setSearchName] = useState<string>('');
     const [cocktails, setCocktails] = useState<Cocktail[]>([]);
     const [loading, setLoading] = useState<boolean>(false);
+
+    const nameInputRef = useRef<HTMLInputElement>(null); 
+
+    useEffect(() => {
+        
+        nameInputRef.current?.focus();
+    }, []);
 
     const handleSearchByType = async (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
@@ -42,17 +49,24 @@ function SearchForm() {
             <h2 className='searchh2'>Search Cocktails</h2>
             
             <form className='searchf' onSubmit={handleSearchByType}>
-                <label className='searchl' htmlFor="searchType"> Search by type:</label>
+                <label className='searchl' htmlFor="searchType">Search by type:</label>
                 <select className='searchs' id="searchType" value={searchType} onChange={(e) => setSearchType(e.target.value)}>
                     <option value="Alcoholic">Alcoholic</option>
                     <option value="Non_Alcoholic">Non-Alcoholic</option>
                 </select>
-                <button className='searchb1' type="submit">Search </button>
+                <button className='searchb1' type="submit">Search</button>
             </form>
             <form onSubmit={handleSearchByName}>
                 <label htmlFor="searchName">Search by name:</label>
-                <input className='searchi' type="text" id="searchName" value={searchName} onChange={(e) => setSearchName(e.target.value)} />
-                <button className='searchb' type="submit">Search </button>
+                <input
+                    className='searchi'
+                    type="text"
+                    id="searchName"
+                    ref={nameInputRef} 
+                    value={searchName}
+                    onChange={(e) => setSearchName(e.target.value)}
+                />
+                <button className='searchb' type="submit">Search</button>
             </form>
             <img className="barmanImage" src={barmanImage} alt="barman" />
             <p className='searchp'>Unleash your inner mixologist with our powerful search tool at Cocktail Connoisseur! 

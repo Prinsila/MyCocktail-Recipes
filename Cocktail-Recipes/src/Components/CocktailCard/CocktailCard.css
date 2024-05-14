@@ -1,6 +1,6 @@
 .cocktail-card {
   border: 1px solid #ccc;
-  background-color: rgb(193, 240, 217);
+  background-color: rgb(199, 243, 199);
   
   border-radius: 8px;
   overflow: hidden;
@@ -8,7 +8,7 @@
   box-shadow: 0 2px 8px rgba(239, 231, 231, 0.1);
   display: flex;
   flex-direction: column;
-  max-width: 300px;
+  
 }
 
 .cocktail-image {

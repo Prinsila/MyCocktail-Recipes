@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 
 interface FilterProps {
   onFilterChange: (filter: string) => void;
-  debounceDelay?: number;  // Optional debounce delay in milliseconds
+  debounceDelay?: number;  
 }
 
 function Filter({ onFilterChange, debounceDelay = 300 }: FilterProps) {

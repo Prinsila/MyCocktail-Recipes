@@ -8,7 +8,7 @@ interface Cocktail {
   idDrink: string;
   strDrink: string;
   strDrinkThumb: string;
-  onClick: () => void; // to prop the click
+  onClick: () => void; 
 }
 
 function Cocktails ()  {
@@ -53,7 +53,7 @@ function Cocktails ()  {
               id={cocktail.idDrink}
               name={cocktail.strDrink}
               image={cocktail.strDrinkThumb}
-              description={""}  // Since description is not available in this API response
+              description={""}  
             />
             
           ))}
