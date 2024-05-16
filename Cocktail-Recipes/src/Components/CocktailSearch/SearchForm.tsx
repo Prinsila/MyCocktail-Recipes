@@ -1,24 +1,23 @@
-import  { useState, useRef, useEffect, FormEvent } from 'react';
+import React, { useState, useRef, useEffect, useCallback, useMemo, FormEvent } from 'react';
 import { Cocktail } from '../../Types/CocktailTypes';
 import { fetchCocktailsByType, searchCocktailsByName } from '../../Services/DrinkServices';
 import CocktailCard from '../CocktailCard/CocktailCard';
 import './SearchForm.css';
 import barmanImage from '../../assets/cocktail-photos/barman.png';
 
-function SearchForm() {
+const SearchForm: React.FC = () => {
     const [searchType, setSearchType] = useState<string>('Alcoholic');
     const [searchName, setSearchName] = useState<string>('');
     const [cocktails, setCocktails] = useState<Cocktail[]>([]);
     const [loading, setLoading] = useState<boolean>(false);
 
-    const nameInputRef = useRef<HTMLInputElement>(null); 
+    const nameInputRef = useRef<HTMLInputElement>(null);
 
     useEffect(() => {
-        
         nameInputRef.current?.focus();
     }, []);
 
-    const handleSearchByType = async (event: FormEvent<HTMLFormElement>) => {
+    const handleSearchByType = useCallback(async (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         setLoading(true);
         try {
@@ -29,9 +28,9 @@ function SearchForm() {
         } finally {
             setLoading(false);
         }
-    };
+    }, [searchType]);
 
-    const handleSearchByName = async (event: FormEvent<HTMLFormElement>) => {
+    const handleSearchByName = useCallback(async (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         setLoading(true);
         try {
@@ -42,7 +41,14 @@ function SearchForm() {
         } finally {
             setLoading(false);
         }
-    };
+    }, [searchName]);
+
+    // Memoize the filtered cocktails list based on search name
+    const filteredCocktails = useMemo(() => {
+        return cocktails.filter(cocktail => 
+            cocktail.strDrink.toLowerCase().includes(searchName.toLowerCase())
+        );
+    }, [cocktails, searchName]);
 
     return (
         <div className='searchform'>
@@ -62,7 +68,7 @@ function SearchForm() {
                     className='searchi'
                     type="text"
                     id="searchName"
-                    ref={nameInputRef} 
+                    ref={nameInputRef}
                     value={searchName}
                     onChange={(e) => setSearchName(e.target.value)}
                 />
@@ -77,9 +83,9 @@ function SearchForm() {
             or even the occasion to find the perfect blend for any moment. Don't just make a drink—make a statement with every glass!</p>
 
             {loading && <p>Loading...</p>}
-            {!!cocktails.length && (
+            {!!filteredCocktails.length && (
             <div className="cocktail-list">
-                {cocktails.map((cocktail) => (
+                {filteredCocktails.map((cocktail) => (
                 <CocktailCard
                     key={cocktail.idDrink}
                     id={cocktail.idDrink}
