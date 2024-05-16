@@ -49,4 +49,3 @@ export const searchCocktailsByName = async (name: string): Promise<Cocktail[]> =
     }
     return data.drinks;
 };
-

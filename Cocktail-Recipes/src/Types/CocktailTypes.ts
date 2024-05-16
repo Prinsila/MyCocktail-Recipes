@@ -7,4 +7,5 @@ export interface Cocktail {
   }
   
   export type CocktailType = 'Alcoholic' | 'Non_Alcoholic';
+
   
