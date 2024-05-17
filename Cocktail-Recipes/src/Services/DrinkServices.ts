@@ -21,9 +21,9 @@ export const fetchCocktails = async (): Promise<Cocktail[]> => {
 };
 
 export const fetchCocktailsByType = async (type: CocktailType): Promise<Cocktail[]> => {
-    const url = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=${type}`;
+    const response = await fetch( `https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=${type}`);
     
-    const response = await fetch(url);
+    
     if (!response.ok) {
         throw new Error(`Failed to fetch cocktails by type (${type}): ${response.status}`);
     }
@@ -36,9 +36,9 @@ export const fetchCocktailsByType = async (type: CocktailType): Promise<Cocktail
 };
 
 export const searchCocktailsByName = async (name: string): Promise<Cocktail[]> => {
-    const url = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${name}`;
+   const response = await fetch( `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${name}`);
     
-    const response = await fetch(url);
+    
     if (!response.ok) {
         throw new Error(`Failed to search cocktails by name (${name}): ${response.status}`);
     }
