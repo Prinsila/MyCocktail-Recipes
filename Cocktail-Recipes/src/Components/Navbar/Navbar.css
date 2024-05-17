@@ -55,7 +55,7 @@ nav {
   .nav-links {
     flex-direction: column;
     width: 100%;
-    display: none; 
+    display: flex; 
   }
 
   .nav-links a {
@@ -73,12 +73,12 @@ nav {
   }
 
   
-  .nav-toggle {
+ nav-toggle {
     font-size: 1.5rem;
     background: none;
     border: none;
     color: white;
     cursor: pointer;
-    display: block;
+    display: none;
   }
 }
