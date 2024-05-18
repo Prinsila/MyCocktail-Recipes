@@ -1,6 +1,6 @@
-/* General container styling */
+
 .cocktailDetail {
-  background-color: #ebf5f3;
+  background-color: var(--link);
   color: #2d2d2d;
   font-family: 'Arial', sans-serif;
   max-width: 800px;
@@ -10,7 +10,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Back button styling */
+
 .btn {
   cursor: pointer;
   color: #fff;
@@ -29,7 +29,7 @@
 
 /* Heading styling */
 .DetailH {
-  color: #3d3f3f;
+  color: var(--text);
   margin-bottom: 10px;
 }
 

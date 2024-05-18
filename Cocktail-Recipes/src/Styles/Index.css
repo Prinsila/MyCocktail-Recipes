@@ -30,7 +30,27 @@
    
    
   } 
-  
+  body[data-theme="light"]{
+    --primary: white;
+    --nav: rgb(58, 124, 58);
+    --white:white;
+    --navBackGround: #1E211F;
+    --link:#70be77;
+    --linkHover:#444;
+    --text:#333;
+    --header:#393c3c;
+    }
+    body[data-theme="dark"]{
+      --primary: rgb(14, 14, 14);
+    --nav: rgb(215, 239, 215);
+    --white:rgb(19, 17, 17);
+    --navBackGround: #07BB43;
+    --link:#1a362f;
+    --linkHover:#444;
+    --text:rgb(244, 238, 48);
+    --header:rgb(244, 238, 48);
+    }
+    
    nav {
    background-color:rgb(58, 124, 58);
    padding: 10px;

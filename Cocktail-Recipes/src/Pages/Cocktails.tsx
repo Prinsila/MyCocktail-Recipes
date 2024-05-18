@@ -40,7 +40,7 @@ function Cocktails ()  {
 
   return (
     <div>
-      <h1>Cocktails List</h1>
+      <h1 className='h1'>Cocktails List</h1>
       
       {error && <p>Error: {error}</p>}
       {loading ? (

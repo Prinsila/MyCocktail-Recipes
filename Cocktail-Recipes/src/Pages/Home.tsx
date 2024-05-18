@@ -8,7 +8,7 @@ function Home() {
   return (
     <div>
       <div className='Home'>
-        <h1>Welcome to Cocktail Connoisseur!</h1>
+        <h1 className='h1'>Welcome to Cocktail Connoisseur!</h1>
         <img className='banner' src={bannerImage} alt="Cocktail banner" />
         <p className='p1'> Dive into a vibrant world of flavors and finesse where every sip tells a story.
          Whether you are looking to recreate the classics or experiment with avant-garde mixology, 

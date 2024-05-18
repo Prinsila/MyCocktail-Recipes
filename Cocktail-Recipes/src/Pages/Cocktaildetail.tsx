@@ -40,7 +40,7 @@ function CocktailDetail() {
   }, [id]); 
 
   return (
-    <div style={{minWidth:'90vh'}}>
+    <div style={{margin: 'auto', minHeight:'90vh'}}>
       {loading ? (
         <p>Loading cocktail details...</p>
       ) : error ? (

@@ -1,4 +1,4 @@
-
+/*
 body, html {
   margin: 0;
   padding: 0;
@@ -70,9 +70,10 @@ h1 {
 .cocktail-card div {
   padding: 15px;
   text-align: center;
-}
+} */
 
 /* Responsive adjustments */
+/*
 @media (max-width: 600px) {
   .cocktail-list {
     grid-template-columns: 1fr;  
@@ -89,5 +90,82 @@ h1 {
     margin-bottom: 10px;
     width: 80%; 
     text-decoration: none; 
+  }
+}
+*/
+
+.body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+.h1 {
+  text-align: center;
+  color: var(--header);
+  margin-top: 20px;
+}
+.cocktail-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+.search-form {
+  display: flex;
+  justify-content: center;
+  margin: 20px auto;
+}
+.search-form input[type="text"],
+.search-form select {
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #5B5858;
+  border-radius: 5px;
+}
+.search-form button {
+  padding: 10px 20px;
+  background-color: #39E4EA;
+  color: rgb(31, 29, 29);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.search-form button:hover {
+  background-color: #171B18;
+}
+.cocktail-card {
+  border: 1px solid #E2D2D2;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+.cocktail-card:hover {
+  transform: scale(1.05);
+}
+.cocktail-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.cocktail-card div {
+  padding: 15px;
+  text-align: center;
+}
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .cocktail-list {
+    grid-template-columns: 1fr;
+  }
+  .search-form {
+    flex-direction: column;
+    align-items: center;
+  }
+  .search-form input[type="text"],
+  .search-form select,
+  .search-form button {
+    margin-bottom: 10px;
+    width: 80%;
+    text-decoration: none;
   }
 }
